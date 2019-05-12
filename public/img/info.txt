@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+
+font name: BalooTamma-Regular
+font link: https://fonts.google.com/specimen/Baloo+Tamma
+font author: Ek Type
+font author site: https://ektype.in/
+
+icon designer: Mike O'Brien
+icon designer link: /redtablepress
+        
+{"bg":"#EFF5E9","icon-gradient-0":"#666C35","icon-gradient-1":"#77D636","font":"#213210"}
+      

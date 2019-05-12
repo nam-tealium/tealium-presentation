@@ -1,0 +1,27 @@
+<!-- views/profile.ejs -->
+<%- include('head', {}); %>
+
+<body>
+    <main role="main">
+        <header role="banner" class="page-header text-center">
+            <a id="pizza-logo" href="/dashboard"><img id="pizza-header" src="../img/icon.png" alt="Pizza Icon"></a>
+            <h1 class="pizza-dash">I Need Pizza</h1>
+        </header>
+        <form action="/order-pizza" method="post">
+        <section role="region" class="pizza-order">
+          <label><h3>Total Pizzas Ordered: <%= pizzas.length %></h3></label>
+        
+      </section>
+        <section role="region" class="pizza-order">
+            <button type="submit" class="btn-order"> Click Here and Order a Pizza </a>
+          
+        </section>
+        <footer role="contentinfo" id="dash-footer">  
+            <a href="/logout">
+                <i id="logout" class="fas fa-sign-out-alt"></i>
+            </a>
+        </footer>
+    </main>
+    <%- include('scripts', {}); %>
+</body>
+</html>
