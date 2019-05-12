@@ -1,7 +1,26 @@
 <%- include('head', {}); %>
 
 <body>
-    <%- include('tealium', {}); %>
+    <script type="text/javascript">
+      var utag_data = {
+        page_name: "index", // Contains a user-friendly name for the page.
+        page_category: "landing page", // Contains a user-friendly page category, e.g. 'appliance page'.
+      };
+    </script>
+     <!-- Loading script asynchronously -->
+     <script type="text/javascript">
+      (function(a, b, c, d) {
+        a = "//tags.tiqcdn.com/utag/services-presentations/nam-ngo/prod/utag.js";
+        b = document;
+        c = "script";
+        d = b.createElement(c);
+        d.src = a;
+        d.type = "text/java" + c;
+        d.async = true;
+        a = b.getElementsByTagName(c)[0];
+        a.parentNode.insertBefore(d, a);
+      })();
+    </script>
     <main role="main" id="main-index">
         <h1 class="pizza-title">I Need Pizza</h1>
         <section role="region" class="landing-content">

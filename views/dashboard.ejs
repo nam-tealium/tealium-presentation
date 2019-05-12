@@ -2,7 +2,27 @@
 <%- include('head', {}); %>
 
 <body>
-    <%- include('tealium', {}); %>
+    <script type="text/javascript">
+      var utag_data = {
+        page_name: "dashboard", // Contains a user-friendly name for the page.
+        page_category: "order pizza form", // Contains a user-friendly page category, e.g. 'appliance page'
+      };
+    </script>
+    
+    <!-- Loading script asynchronously -->
+    <script type="text/javascript">
+      (function(a, b, c, d) {
+        a = "//tags.tiqcdn.com/utag/services-presentations/nam-ngo/prod/utag.js";
+        b = document;
+        c = "script";
+        d = b.createElement(c);
+        d.src = a;
+        d.type = "text/java" + c;
+        d.async = true;
+        a = b.getElementsByTagName(c)[0];
+        a.parentNode.insertBefore(d, a);
+      })();
+    </script>
     <main role="main">
         <header role="banner" class="page-header text-center">
             <a id="pizza-logo" href="/dashboard"><img id="pizza-header" src="../img/icon.png" alt="Pizza Icon"></a>
