@@ -15,7 +15,7 @@ function isLoggedIn(req, res, next) {
 // Dashboard SECTION =====================
 // we will want this protected so you have to be logged in to visit
 // we will use route middleware to verify this (the isLoggedIn function)
-router.get("/dashboard", isLoggedIn, function(req, res) {
+router.get("/dashboard/:id", isLoggedIn, function(req, res) {
   Pizza.find({ user: req.user.id }, function(err, pizza) {
     if (err) {
       res.status(500).send(err);
@@ -36,7 +36,7 @@ router.post("/order-pizza", isLoggedIn, jsonParser, function(req, res) {
       if (user) {
         req.body.user = req.user._id;
         Pizza.create(req.body)
-          .then(res.redirect("/dashboard"))
+          .then(res.redirect(`/dashboard/${req.body.user}`))
           .catch(err => {
             console.error(err);
             res.status(500).json({ message: "Internal server error" });

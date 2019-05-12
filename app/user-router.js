@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const passport = require("passport");
+const User = require("../app/models/user");
 
 // route middleware to make sure a user is logged in
 function isLoggedIn(req, res, next) {
@@ -32,10 +33,12 @@ router.get("/login", function(req, res) {
 router.post(
   "/login",
   passport.authenticate("local-login", {
-    successRedirect: "/dashboard", // redirect to the secure profile section
     failureRedirect: "/login", // redirect back to the signup page if there is an error
     failureFlash: true // allow flash messages
-  })
+  }),
+  function(req, res) {
+    res.redirect(`/dashboard/${req.user._id}`); // redirect to the secure profile section
+  }
 );
 
 // show the signup form
@@ -51,10 +54,12 @@ router.get("/signup", function(req, res) {
 router.post(
   "/signup",
   passport.authenticate("local-signup", {
-    successRedirect: "/dashboard", // redirect to the secure profile section
     failureRedirect: "/signup", // redirect back to the signup page if there is an error
     failureFlash: true // allow flash messages
-  })
+  }),
+  function(req, res) {
+    res.redirect(`/dashboard/${req.user._id}`); // redirect to the secure profile section
+  }
 );
 
 // LOGOUT ==============================
