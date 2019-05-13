@@ -4,10 +4,8 @@
 <body>
     <script type="text/javascript">
       var utag_data = {
-        page_name: "dashboard", // Contains a user-friendly name for the page.
+        page_name: "order", // Contains a user-friendly name for the page.
         page_category: "order pizza form", // Contains a user-friendly page category, e.g. 'appliance page'
-        customer_id: "customer id",
-        ga_eventAction: "pizza ordered"
       };
     </script>
     
@@ -27,7 +25,7 @@
     </script>
     <main role="main">
         <header role="banner" class="page-header text-center">
-            <a id="pizza-logo" href="/dashboard"><img id="pizza-header" src="../img/icon.png" alt="Pizza Icon"></a>
+            <a id="pizza-logo" href="/menu"><img id="pizza-header" src="../img/icon.png" alt="Pizza Icon"></a>
             <h1 class="pizza-dash">I Need Pizza</h1>
         </header>
         <form action="/order-pizza" method="post">
@@ -36,7 +34,7 @@
         
       </section>
         <section role="region" class="pizza-order">
-            <button type="submit" class="btn-order"> Click Here and Order a Pizza </button>
+            <button type="submit" class="btn-order"> Order a Pizza </button>
           
         </section>
         </form>
