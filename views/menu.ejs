@@ -5,14 +5,11 @@
     <script type="text/javascript">
       var utag_data = {
         page_name: "menu", // Contains a user-friendly name for the page.
+        tealium_event : "product_list_view",
+        product_on_page : [Pizza] // Required
       };
     </script>
-       <script type="text/javascript">
-        utag.view({
-          tealium_event : "product_list_view",
-          product_on_page : [Pizza] // Required
-        });
-      </script>
+    
     <!-- Loading script asynchronously -->
     <script type="text/javascript">
       (function(a, b, c, d) {
